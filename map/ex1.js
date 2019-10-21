@@ -20,8 +20,11 @@ En sortie: [
 ]
 
  */
-
+function howManyCharacters (number) {
+  return `${number} contains ${number.length} characters`
+}
 function getStringsLength(strings) {
+  return strings.map(howManyCharacters);
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

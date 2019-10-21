@@ -58,8 +58,20 @@ En sortie:
   ]
 
  */
-
+function freshness (movies) {
+  if (movies.rating >= 60 && movies.rating <= 75){
+    movies.label = 'fresh';
+  }
+  else if (movies.rating > 75) {
+    movies.label = 'certified fresh';
+  }
+  else {
+    movies.label = 'rotten';
+  }
+  return movies;
+}
 function getMoviesFreshness(movies) {
+  return movies.map(freshness);
 }
 
 

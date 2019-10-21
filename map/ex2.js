@@ -42,9 +42,12 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
+function suitable (foods) {
+  return `${foods.food} ${foods.isVegetarian ? 'is suitable' : 'is not suitable'} for vegetarians`;
 }
-
+function getFoodCategories(foods) {
+  return foods.map(suitable);
+}
 
 
 // Ne pas modifier l'export
